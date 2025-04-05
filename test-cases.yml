@@ -1,5 +1,52 @@
 ---
 - summary: |
+    Проверка валидации полей формы регистрации
+  requirement: |
+    Если при регистрации не вводить данные в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+  prerequisites:
+    Открыта страница регистрации
+  test-data: |
+    Nickname = null
+    Email = null
+    Password = null
+    Password Confirmation = null
+  steps:
+    - Нажать на кнопку Зарегистрироваться, если нет аккаунта
+    - Оставить поле Nickname пустым
+    - Оставить поле Email пустым
+    - Оставить поле Password пустым
+    - Оставить поле Password Confirmation пустым
+    - Нажть кнопку Зарегистрироваться
+  expected-result: |
+    Система выдаст ошибку и не позволит зарегистрироваться
+
+- summary: |
+    Проверка валидации полей формы регистрации
+  requirement: |
+    Если при регистрации вводить любые данные в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+  prerequisites:
+    Открыта страница регистрации
+  test-data: |
+    Nickname = 56
+    Email = @gmail.com
+    Password = 789yui
+    Password Confirmation = 789yui
+    Nickname = 12345678qwertyu
+    Email = @gm.com
+    Password = 789yu@
+    Password Confirmation = 789yui
+  steps:
+    - Нажать на кнопку Зарегистрироваться, если нет аккаунта
+    - Ввести тестовые данные в поля: Nickname, Email, Password, Password Confirmation
+  expected-result: |
+    Система выдаст ошибку и не позволит зарегистрироваться
+
+    
+
+
+    
+    
+- summary: |
     Проверка авторизации пользователя с существующими логином и паролем
   requirement: |
     При верном вводе логина и пароля пользователь должен войти в систему
@@ -56,20 +103,4 @@
   expected-result: |
     Открывается главная страница
 
-- summary: |
-    Проверка валидации полей формы регистрации
-  requirement: |
-    Если при регистрации ввести любые данные в поля регистрации, система выдаст ошибку
-  prerequisites:
-    Открыта страница регистрации
-  test-data: |
-    Nickname = 56
-    Email = 123azsx@ma.ru
-    Password = 1a2s3d4f5g6h
-  steps:
-    - Нажать на кнопку Зарегистрироваться, если нет аккаунта
-    - Ввести данные в поле Nickname
-    - Ввести данные в поле Email
-    - Ввести данные в поле Password
-  expected-result: |
-    Открывается главная страница  
+
