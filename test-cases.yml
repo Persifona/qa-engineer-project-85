@@ -2,7 +2,7 @@
 - summary: |
     Проверка валидации полей формы регистрации
   requirement: |
-    Если при регистрации не вводить данные в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+    Если при регистрации оставить пустыми поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
   prerequisites:
     Открыта страница регистрации
   test-data: |
@@ -23,7 +23,7 @@
 - summary: |
     Проверка валидации полей формы регистрации
   requirement: |
-    Если при регистрации вводить любые данные в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+    Если при регистрации вводить данные, не соответствующие требованиям, в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
   prerequisites:
     Открыта страница регистрации
   test-data: |
@@ -36,7 +36,8 @@
     Password = 789yu@
     Password Confirmation = 789yui
   steps:
-    - Нажать на кнопку Зарегистрироваться, если нет аккаунта
+    - Нажать на кнопку Войти
+    - Нажать на кнопку Зарегистрироваться
     - Ввести тестовые данные в поля: Nickname, Email, Password, Password Confirmation
   expected-result: |
     Система выдаст ошибку и не позволит зарегистрироваться
