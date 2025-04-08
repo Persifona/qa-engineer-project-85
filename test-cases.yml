@@ -30,7 +30,21 @@
     Nickname = 56
     Email = @gmail.com
     Password = 789yui
-    Password Confirmation = 789yui
+    Password Confirmation = 789yu
+  steps:
+    - Нажать на кнопку Войти
+    - Нажать на кнопку Зарегистрироваться
+    - Ввести тестовые данные в поля: Nickname, Email, Password, Password Confirmation
+  expected-result: |
+    Система выдаст ошибку и не позволит зарегистрироваться
+
+- summary: |
+    Проверка валидации полей формы регистрации
+  requirement: |
+    Если при регистрации вводить данные, не соответствующие требованиям, в поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+  prerequisites:
+    Открыта страница регистрации
+  test-data: |
     Nickname = 12345678qwertyu
     Email = @gm.com
     Password = 789yu@
@@ -41,11 +55,6 @@
     - Ввести тестовые данные в поля: Nickname, Email, Password, Password Confirmation
   expected-result: |
     Система выдаст ошибку и не позволит зарегистрироваться
-
-    
-
-
-    
     
 - summary: |
     Проверка авторизации пользователя с существующими логином и паролем
