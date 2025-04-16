@@ -78,7 +78,7 @@
   steps:
     - Нажать на кнопку Войти
     - Нажать на кнопку Зарегистрироваться
-    - Ввести тестовые данные в поля: Nickname, Email, Password, Password Confirmation
+    - Ввести тестовые данные в поля Nickname, Email, Password, Password Confirmation
   expected-result: |
     Появится сообщение об ошибке 
 
