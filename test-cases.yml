@@ -45,7 +45,7 @@
 - summary: |
     Проверка валидации полей формы регистрации
   requirement: |
-    Если при регистрации оставить пустыми поля: Nickname, Email, Password, Password Confirmation, система выдаст ошибку
+    Если при регистрации оставить пустыми поля Nickname, Email, Password, Password Confirmation, система выдаст ошибку
   prerequisites:
     Открыта страница регистрации
   test-data: |
