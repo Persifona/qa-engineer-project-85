@@ -5,8 +5,6 @@
     Сайт корректно отображается и работает в нескольких браузерах 
   prerequisites: |
     Открыт инструмент BrowserStack
-    Mozilla Firefox 137.0.1 (64-разрядный)
-    Microsoft Edge Версия 135.0.3179.54 (Официальная сборка) (64-разрядная версия)
   test-data: |
     https://codebattle.hexlet.io/
   steps:
