@@ -806,16 +806,20 @@
     Скрипт не сработает
 
 - summary: |
-    Проверка уязвимости сайта https://codebattle.hexlet.io/settings от SQL - иньекций
+    Проверка уязвимости сайта https://codebattle.hexlet.io/settings от SQL - инъекций
   requirement: |
-    Система защищена от от SQL - иньекций
+    Система защищена от от SQL - инъекций
   prerequisites:
-    Открыта главная страница сайта
+    Открыта страница Турниры
   test-data: |
-    Message = ' OR 1=1 -
-    Message = '; DROP TABLE users; --
+    Message = https://codebattle.hexlet.io/tournaments/1674'; DROP TABLE users; --
+    Message = https://codebattle.hexlet.io/tournaments/1674'
+    Message = https://codebattle.hexlet.io/tournaments/1674"
+    Message = https://codebattle.hexlet.io/tournaments=1674+OR+1
+    Message = https://codebattle.hexlet.io/tournaments=1674+--
+    Message = https://codebattle.hexlet.io/tournaments=1674+UNION+SELECT+*+FROM+news+WHERE+id=4
   steps:
-    - Ввести тестовые данные в поле регистрации
+    - Нажать на кнопку Show любого турнира
     - Ввести тестовые данные в поле аутентификации
     - Нажать кнопку Submit
   expected-result: |
