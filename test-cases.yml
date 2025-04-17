@@ -805,6 +805,22 @@
   expected-result: |
     Скрипт не сработает
 
+- summary: |
+    Проверка уязвимости сайта https://codebattle.hexlet.io/settings от SQL - иньекций
+  requirement: |
+    Система защищена от от SQL - иньекций
+  prerequisites:
+    Открыта главная страница сайта
+  test-data: |
+    Message = ' OR 1=1 -
+    Message = '; DROP TABLE users; --
+  steps:
+    - Ввести тестовые данные в поле регистрации
+    - Ввести тестовые данные в поле аутентификации
+    - Нажать кнопку Submit
+  expected-result: |
+    Скрипт не сработает
+
     
 
     
