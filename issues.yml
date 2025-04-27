@@ -1,9 +1,10 @@
 ---
 issues:
   - url: "https://github.com/hexlet-codebattle/codebattle/issues/2152"
-  - url: "Проверка наличия модерирования сообщений в чате в процессе игры с игроком"
-  - url: "Проверка фильтров рейтинга пользователей"
-  - url: "https://github.com/hexlet-codebattle/codebattle/issues/2148" Ошибка: у недавно зарегистрированного пользователя отображаются неверные победы и рейтинг
+  - url: "https://github.com/hexlet-codebattle/codebattle/issues/2151"
+  - url: "https://github.com/hexlet-codebattle/codebattle/issues/2140"
+  - url: "https://github.com/hexlet-codebattle/codebattle/issues/2148" 
   - url: "https://github.com/hexlet-codebattle/codebattle/issues/2140" 
+  - url: "https://github.com/hexlet-codebattle/codebattle/issues/2059" 
   
   
