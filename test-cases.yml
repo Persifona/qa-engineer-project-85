@@ -67,8 +67,9 @@
     Открыта страница регистрации
   test-data: |
     Nickname = 56
+    Nickname = 11111111111111111111111
     Email = @gmail.com
-    Password = 789yui
+    Password = 789
     Password Confirmation = 789yu
   steps:
     - Нажать на кнопку Войти
@@ -86,8 +87,8 @@
   test-data: |
     Nickname = 12345678qwertyui
     Email = 1@gm.co
-    Password = qwerty@
-    Password Confirmation = 789yui
+    Password = q w e @ # &
+    Password Confirmation = q w e @ # &
   steps:
     - Нажать на кнопку Sign up
     - Ввести тестовые данные в поля Nickname, Email, Password, Password Confirmation
